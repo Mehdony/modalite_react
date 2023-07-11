@@ -1,0 +1,28 @@
+{
+  "name": "modalite_react",
+  "version": "1.0.8",
+  "description": "A simple react modal component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mehdony/modalite_react.git"
+  },
+  "author": "Ammour Mehdi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mehdony/modalite_react/issues"
+  },
+  "homepage": "https://github.com/Mehdony/modalite_react#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
