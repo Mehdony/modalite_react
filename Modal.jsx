@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-const Modal = ({ message, setSent}) => {
+/**
+ * A simple modal component that displays a message and a button to close it.
+ * 
+ * @component
+ * @param {Object} props - The component's props.
+ * @param {string} props.message - The message to be displayed in the modal.
+ * @param {Function} props.setSent - A function to update the state after the modal is closed.
+ * @returns {JSX.Element|null} Returns a JSX element representing the modal or null if it's closed.
+ */
+
+const Modal = ({ message, setSent }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -10,9 +20,6 @@ const Modal = ({ message, setSent}) => {
     // }, timeDuration);
     // return () => clearTimeout(timer); 
   }, [message]);
-
-
-
 
   if (!isOpen) return null;
 
@@ -33,7 +40,6 @@ const Modal = ({ message, setSent}) => {
         fontSize: "1.5rem",
         fontWeight: "bold",
         rowGap: "1rem",
-
       }}
     >
       <div>{message}</div>
@@ -51,7 +57,7 @@ const Modal = ({ message, setSent}) => {
         textAlign: "center",
         textDecoration: "none",
         display: "inline-block"
-      }} onClick={() =>{setSent(false); setIsOpen(false)}}>Fermer</button>
+      }} onClick={() => {setSent(false); setIsOpen(false)}}>Close</button>
     </div>
   );
 };
